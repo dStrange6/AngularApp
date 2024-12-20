@@ -35,7 +35,6 @@ jobs:
         run: |
           git config --global user.email pathakmayank021@gmail.com
           git config --global user.name dStrange6
-          git branch -d build-branch
           git checkout --orphan build-branch
           git reset --hard
           git clean -fdx
