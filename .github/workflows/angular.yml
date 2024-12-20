@@ -28,6 +28,15 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: push build to diff branch
+        run: |
+          git checkout --orphan build-branch
+          git reset
+          cp -r dist/* .
+          git add .
+          git commit -m "adding builds"
+          git push origin build-branch
   
   
 
