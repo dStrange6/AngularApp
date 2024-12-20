@@ -38,7 +38,7 @@ jobs:
           git checkout --orphan build-branch
           git reset --hard
           cp -r dist/* .
-          git add 
+          git add .
           git commit -m "adding builds"
           git remote set-url origin https://${{ secrets.TOKEN }}@github.com/dStrange6/AngularApp.git
           git push origin build-branch
