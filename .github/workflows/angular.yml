@@ -37,7 +37,7 @@ jobs:
           git config --global user.name dStrange6
           git checkout --orphan build-branch
           git reset --hard
-          cp -r dist/*
+          cp -r dist/* .
           git add 
           git commit -m "adding builds"
           git remote set-url origin https://${{ secrets.TOKEN }}@github.com/dStrange6/AngularApp.git
