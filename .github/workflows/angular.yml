@@ -30,7 +30,11 @@ jobs:
 
       - name: Build
         run: npm run build
-
+        
+      - name: Test SFTP
+        run: |
+          sftp -P 2329 cargacmsdev@transfer-u.con.iberia.es
+      
       - name: push build to diff branch
         run: |
           git config --global user.email pathakmayank021@gmail.com
